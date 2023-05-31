@@ -59,10 +59,13 @@ const SliderComponent = () => {
     0: {
       items: 2,
     },
-    600: {
-      items: 3,
+    650: {
+      items: 2,
     },
     1024: {
+      items: 3,
+    },
+    1200: {
       items: 4,
     },
   };

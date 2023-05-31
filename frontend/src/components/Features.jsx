@@ -56,7 +56,7 @@ const Features = () => {
             className={styles.file}
             draggable="false"
             loop={true}
-            playsinline=""
+            playsInline=""
             src="https://static.canva.com/anon_home/teams-en-974x720.mp4"
           ></video>
         </div>

@@ -1,0 +1,66 @@
+.Bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99999999999;
+  background: #ffffff;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.Bottom p {
+  flex: 4;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #000000;
+}
+
+.Bottom span {
+  font-weight: bold;
+  margin-right: 4px;
+}
+.profile {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  flex: 4;
+}
+.profile button:nth-child(1) {
+  cursor: pointer;
+  padding: 0.45rem;
+  background-color: #f4f4f6;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.add {
+  background: #8b3dff;
+  padding: 0 1.5rem;
+  color: white;
+  font-weight: bold;
+  font-size: 13px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.none {
+  display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+  .Bottom p {
+    display: none;
+  }
+  .profile {
+    flex: 1;
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .add {
+    display: none;
+  }
+}

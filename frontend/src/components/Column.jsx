@@ -10,11 +10,11 @@ const Column = () => {
         <div className={styles.item}>
           <div className={styles.Image}>
             <video
-              autoplay={true}
+              autoPlay={true}
               className={styles.file}
               draggable="false"
               loop={true}
-              playsinline=""
+              playsInline=""
               src={One}
             ></video>
           </div>

@@ -34,7 +34,7 @@ const Hero = () => {
           className={styles.file}
           draggable="false"
           loop={true}
-          playsinline=""
+          playsInline=""
           src="https://content-management-files.canva.com/943bd1b3-ffd6-4892-a4df-b107cb33e657/hero-banner-en-1600x852.mp4"
         ></video>
       </div>

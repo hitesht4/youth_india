@@ -5,7 +5,6 @@
   align-items: center;
   padding: 7rem 0 1rem 0;
 }
-
 .About h1 {
   color: #000000;
   font-size: 3rem;
@@ -27,7 +26,6 @@
   border-radius: 4px;
   cursor: pointer;
 }
-
 .grid {
   width: 90%;
   margin: auto;
@@ -36,7 +34,6 @@
   grid-template-rows: repeat(7, 75px);
   margin-bottom: 2rem;
 }
-
 .grid img {
   width: 100%;
   height: 100%;
@@ -73,15 +70,20 @@
     font-size: 1.15rem;
   }
   .About button {
-    padding: 0.9rem;
+    padding: 0.6rem 0.9rem;
     width: 30%;
+  }
+  .grid div {
+    grid-area: auto/auto/auto/auto;
   }
   .grid {
     width: 95%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 350px;
     margin-bottom: 0;
   }
   .vedio {
-    grid-area: 1/1/8/51;
+    width: 100%;
   }
   .one {
     display: none;
@@ -110,13 +112,16 @@
     text-align: center;
   }
   .About button {
-    padding: 0.9rem;
+    padding: 0.7rem 0.9rem;
     width: 90%;
     margin: auto;
   }
+  .grid div {
+    grid-area: auto/auto/auto/auto;
+  }
   .grid {
     width: 100%;
-    margin-bottom: 1rem;
+    grid-template-rows: 250px;
     padding: 0;
   }
   .vedio {

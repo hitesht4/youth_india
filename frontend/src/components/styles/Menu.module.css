@@ -1,0 +1,72 @@
+.menu {
+  position: fixed;
+  top: 4.6rem;
+  background: #ffffff;
+  left: 100px;
+  right: 100px;
+  z-index: 99999999999;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  padding: 4rem;
+  grid-gap: 1rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.none {
+  display: none;
+}
+
+.menu li {
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: 400;
+  cursor: pointer;
+  color: rgba(13, 18, 22, 0.7);
+}
+
+.menu li:hover {
+  color: #8b3dff;
+}
+
+.headers {
+  font-size: 1rem;
+  line-height: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  color: #000000;
+  white-space: nowrap;
+}
+.flexer {
+  grid-area: 1/6/2/8;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.Image {
+  height: 60%;
+}
+
+.text {
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.text > h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  color: #000000;
+  white-space: nowrap;
+}
+.text p {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 400;
+  cursor: pointer;
+  color: rgba(13, 18, 22, 0.7);
+}

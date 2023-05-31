@@ -2,6 +2,10 @@ header {
   width: 100%;
   height: 5rem;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  position: fixed;
+  top: 0;
+  background: #fff;
+  z-index: 99999;
 }
 .navbar {
   display: flex;
@@ -29,7 +33,6 @@ header {
 li svg {
   margin-top: 2px;
 }
-
 .profile {
   display: flex;
   gap: 1rem;
@@ -51,7 +54,6 @@ li svg {
   border-radius: 4px;
   cursor: pointer;
 }
-
 .center {
   width: 350px;
   display: flex;
@@ -74,4 +76,59 @@ input {
   padding: 0.35rem;
   outline: none;
   border: none;
+}
+.bars {
+  display: none !important;
+  padding: 1rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  .nav {
+    display: none;
+  }
+  .bars {
+    display: block;
+    padding: 1rem;
+  }
+  .bars svg {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .navbar {
+    justify-content: flex-start;
+    padding: 0 1rem;
+  }
+  .nav {
+    display: none;
+  }
+  .add {
+    display: none;
+  }
+  .bars {
+    display: block !important;
+    padding: 0.4rem;
+  }
+  .bars svg {
+    font-size: 2rem;
+  }
+  .center {
+    position: absolute;
+    right: calc(2rem + 100px);
+    width: 40px;
+  }
+  .center input {
+    display: none;
+  }
+  .profile {
+    justify-self: flex-end;
+    margin-right: 0;
+    position: absolute;
+    right: 1rem;
+  }
+  .profile button:nth-child(1) {
+    background: #8b3dff;
+    color: white;
+  }
 }

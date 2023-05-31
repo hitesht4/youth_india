@@ -29,6 +29,17 @@
   color: black !important;
 }
 
-/* .App > div {
-  border: 2px solid red;
-} */
+@media only screen and (max-width: 1024px) {
+  .img {
+    height: 200px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .alice-carousel__prev-btn-item {
+    display: none !important;
+  }
+  .alice-carousel__next-btn-item {
+    display: none !important;
+  }
+}

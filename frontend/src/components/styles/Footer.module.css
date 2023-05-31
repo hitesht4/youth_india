@@ -29,7 +29,9 @@ footer li:hover {
   cursor: pointer;
   color: #8b3dff;
 }
-
+.accordion {
+  display: none;
+}
 .footer_flex {
   display: flex;
   justify-content: space-between;
@@ -71,4 +73,31 @@ select {
 }
 .footer_icons svg {
   font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  .accordion {
+    display: block !important;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    display: none;
+  }
+  .footer_grid {
+    display: none;
+  }
+  .footer_flex {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    padding: 2rem;
+  }
+  .footer_icons {
+    order: 2;
+  }
+  .exit {
+    order: 3;
+  }
 }
