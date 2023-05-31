@@ -1,0 +1,129 @@
+.Offer {
+  width: 77%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  padding: 4rem 1rem;
+  gap: 2.3rem;
+}
+.Offer > h2 {
+  font-weight: 700;
+  color: #000000;
+  font-size: 2rem;
+}
+
+.offer_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.Offer > p {
+  font-size: 14px;
+  font-weight: 400;
+}
+.Offer span {
+  color: #8b3dff;
+  margin: 0 5px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.card h4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #000000;
+}
+.card svg {
+  fill: #fbbe28;
+  font-size: 2rem;
+}
+.card p {
+  min-height: 78px;
+  text-align: center;
+  color: rgba(13, 18, 22, 0.86);
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+}
+.card button {
+  background: #8b3dff;
+  padding: 0.7rem;
+  width: 70%;
+  color: white;
+  font-weight: bold;
+  font-size: 13px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1024px) {
+  .Offer {
+    width: 95%;
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+
+  .offer_grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .card {
+    gap: 1rem;
+  }
+  .card h4 {
+    gap: 0.8rem;
+    font-size: 1.3rem;
+    white-space: nowrap;
+  }
+  .card svg {
+    font-size: 1.3rem;
+  }
+
+  .card p {
+    min-height: 0;
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .card button {
+    width: 90%;
+    overflow: hidden;
+    font-size: 10px;
+    white-space: nowrap;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .Offer {
+    width: 100%;
+    align-items: flex-start;
+  }
+  .Offer h2 {
+    font-size: 1.5rem;
+  }
+  .Offer > p {
+    text-align: center;
+  }
+  .offer_grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .card {
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  .card button {
+    width: 100%;
+    font-size: 0.8rem;
+  }
+}

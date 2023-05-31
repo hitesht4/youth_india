@@ -1,0 +1,34 @@
+.alice-carousel {
+  position: relative;
+}
+
+.alice-carousel__prev-btn-item {
+  position: absolute;
+  bottom: 50%;
+  left: 0;
+  font-size: 2rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  text-align: center;
+  background: #ffffff;
+  border-radius: 50%;
+  width: 50px;
+}
+.alice-carousel__next-btn-item {
+  position: absolute;
+  bottom: 50%;
+  right: 0;
+  font-size: 2rem;
+  text-align: center;
+  background: #ffffff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 50%;
+  width: 50px;
+}
+.alice-carousel__next-btn-item:hover,
+.alice-carousel__prev-btn-item:hover {
+  color: black !important;
+}
+
+/* .App > div {
+  border: 2px solid red;
+} */
