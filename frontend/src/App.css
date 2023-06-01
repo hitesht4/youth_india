@@ -29,6 +29,18 @@
   color: black !important;
 }
 
+.browse li {
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.browse li:hover {
+  background: #8b3dff;
+  color: white;
+  cursor: pointer;
+}
+
 @media only screen and (max-width: 1024px) {
   .img {
     height: 200px;

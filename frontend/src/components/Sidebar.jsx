@@ -10,10 +10,17 @@ import { HiBars3 } from "react-icons/hi2";
 import styles from "./styles/Navbar.module.css";
 
 const Sidebar = ({ onOpen, onClose, isOpen }) => {
+  const handleSidebar = () => {
+    if (isOpen) {
+      onClose();
+    } else {
+      onOpen();
+    }
+  };
   return (
     <>
       <HiBars3
-        onClick={onOpen}
+        onClick={handleSidebar}
         className={styles.bars}
         style={{ fontSize: "3rem" }}
       />
@@ -26,7 +33,7 @@ const Sidebar = ({ onOpen, onClose, isOpen }) => {
             top={"3rem"}
           ></DrawerHeader>
           <DrawerBody position={"relative"} top={"3rem"}>
-            <ul>
+            <ul className="browse">
               <li>Design Spotlight</li>
               <li>Buisiness</li>
               <li>Education</li>
