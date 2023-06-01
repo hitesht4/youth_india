@@ -15,7 +15,7 @@ router.get("/", async (req, res) => {
 router.get("/:id", async (req, res) => {
   try {
     const id = req.params.id;
-    const books = await Book.find({ id: id });
+    const books = await Book.findOne({ _id: id });
     res.json(books);
   } catch (error) {
     res.status(500).json({ error: "Internal Server Error" });
@@ -25,7 +25,7 @@ router.get("/:id", async (req, res) => {
 router.delete("/:id", async (req, res) => {
   try {
     const bookId = req.params.id;
-    let book = await Book.deleteOne({ id: bookId });
+    let book = await Book.deleteOne({ _id: bookId });
     if (book) {
       return res.json({ message: "Book deleted successfully" });
     }
@@ -36,11 +36,13 @@ router.delete("/:id", async (req, res) => {
 
 router.post("/", async (req, res) => {
   try {
-    const { body } = req;
+    const body = req.body;
     console.log(body);
-    const newBook = await Book.create(body);
+    const newBook = new Book(body);
+    await newBook.save();
     return res.json({ message: "Book Added successfully", data: newBook });
   } catch (e) {
+    console.log(e.message);
     res.status(500).json({ error: "Internal Server Error" });
   }
 });
@@ -48,9 +50,13 @@ router.post("/", async (req, res) => {
 router.put("/:id", async (req, res) => {
   try {
     const bookId = req.params.id;
-    const updatedBook = await Book.findOneAndUpdate({ id: bookId }, req.body, {
-      new: true,
-    });
+    const updatedBook = await Book.findByIdAndUpdate(
+      { _id: bookId },
+      req.body,
+      {
+        new: true,
+      }
+    );
     if (!updatedBook) {
       return res.status(404).json({ error: "Unable to Update Book" });
     }
